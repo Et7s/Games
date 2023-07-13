@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -8,7 +9,9 @@ public class Enemy : MonoBehaviour
 {
     public int Hp = 100;
 
+    [SerializeField]
     private NavMeshAgent agent;
+
     private Transform target;
     float attackRange = 2;
     public GameObject gameObject;
@@ -16,7 +19,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+       
         target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 

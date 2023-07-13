@@ -86,7 +86,7 @@ public class GynShoot : MonoBehaviour
 
 
         //Graphics
-        Instantiate(bulletHotleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
+        Instantiate(bulletHotleGraphic, rayHit.point, Quaternion.Euler(direction));
 
         bulletsLeft--;
         bulletsShot--;
